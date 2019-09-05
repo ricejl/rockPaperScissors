@@ -7,6 +7,18 @@
 </head>
 
 <body>
+    <h1>Rock Paper Scissors</h1>
+    <h2>Mortal vs Machine</h2>
+
+    <p>What will it be?</p>
+    <form>
+        <input value="Your choice, human." onclick="humanPlay()">
+        <br>
+        <input value="rock"><label>Rock</label><br>
+        <input value="paper"><label>Paper</label><br>
+        <input value="scissors"><label>Scissors</label><br>
+    </form>
+
     <script>
         const hand = [
             'rock',
@@ -20,10 +32,10 @@
             //source of randomizing code
             //https://timonweb.com/tutorials/how-to-get-a-random-value-from-a-javascript-array/
 
-        //function humanPlay() {
-            //result = window.prompt("What will it be?", "rock, paper, or scissors?");
-            //console.log(result);
-        //}
+        function humanPlay() {
+            //choice = window.prompt("What will it be?", "rock, paper, or scissors?");
+            //console.log(choice);
+        }
 
         //computerPlay(hand);
 
