@@ -4,19 +4,31 @@
 <head>
     <meta charset='utf-8'>
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="/home/rice/the_odin_project/RPS/style.css"/>
 </head>
 
 <body>
     <h1>Rock Paper Scissors</h1>
     <h2>Mortal vs Machine</h2>
 
-    <p>What will it be?</p>
+    <p>What will it be? Your choice, human.</p>
+
     <form>
-        <input value="Your choice, human." onclick="humanPlay()">
-        <br>
-        <input value="rock"><label>Rock</label><br>
-        <input value="paper"><label>Paper</label><br>
-        <input value="scissors"><label>Scissors</label><br>
+        <label>
+            <input value="rock" type="radio" name="choice">
+            <img src="/home/rice/the_odin_project/RPS/rock.jpg">
+        </label>
+
+        <label>
+            <input value="paper" type="radio" name="choice">
+            <img src="/home/rice/the_odin_project/RPS/paper.jpg">
+        </label>
+        
+        
+        <label>
+            <input value="scissors" type="radio" name="choice">
+            <img src="/home/rice/the_odin_project/RPS/Forbici_da_occhielli.jpg">
+        </label>
     </form>
 
     <script>
@@ -29,29 +41,52 @@
         function computerPlay(hand) {
             return hand[Math.floor(Math.random() * hand.length)];
         }
-            //source of randomizing code
+            //source of randomizing code from array
             //https://timonweb.com/tutorials/how-to-get-a-random-value-from-a-javascript-array/
 
         function humanPlay() {
-            //choice = window.prompt("What will it be?", "rock, paper, or scissors?");
-            //console.log(choice);
+            let humanChoice = document.querySelector("input[name='choice']:checked").value;
+
+            return(humanChoice);
         }
 
-        //computerPlay(hand);
+        function playRound(playerSelection, computerSelection) {
+            for rock > scissors;
+            //scissors > paper; 
+            //paper > rock; if playerSelection=rock || computerSelection=rock {if}
+//            let playerSelection = humanPlay();
+//            let computerSelection = computerPlay(hand);
 
-        //function playRound(playerSelection, computerSelection) {
-            //rock > scissors;
-            //scissors > paper;
-            //paper > rock;
-            //rock = rock;
-            //scissors = scissors;
-            //paper = paper;
-        //}
+//            if (playerSelection > computerSelection) {
+//                alert("The human wins.")
+//            }
+
+//           else if (playerSelection < computerSelection) {
+//               alert("The computer wins.")
+//            }
+
+//            else if (playerSelection == computerSelection) {
+//                alert("It's a tie.")
+//            }
+
+            if (humanPlay > computerPlay) {
+                alert("Human wins.")
+            }
+
+            else if (humanPlay < computerPlay) {
+                alert("Computer wins.")
+            }
+
+            else if (humanPlay == computerPlay) {
+                alert("It's a tie.")
+            }
+
+        }
 
         //const playerSelection = 'rock';
         //const computerSelection = computerPlay(hand);
 
-        //function game(){} //5 rounds
+        //function game(){} //5 rounds; loop starts with for() {...}
     </script>
 
 </body>
