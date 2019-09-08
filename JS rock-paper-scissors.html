@@ -50,41 +50,25 @@
             return(humanChoice);
         }
 
-        function playRound(playerSelection, computerSelection) {
-            for rock > scissors;
-            //scissors > paper; 
-            //paper > rock; if playerSelection=rock || computerSelection=rock {if}
-//            let playerSelection = humanPlay();
-//            let computerSelection = computerPlay(hand);
+        function playRound() {
 
-//            if (playerSelection > computerSelection) {
-//                alert("The human wins.")
-//            }
+            let playerSelection = humanPlay();
+            let computerSelection = computerPlay(hand);
 
-//           else if (playerSelection < computerSelection) {
-//               alert("The computer wins.")
-//            }
-
-//            else if (playerSelection == computerSelection) {
-//                alert("It's a tie.")
-//            }
-
-            if (humanPlay > computerPlay) {
-                alert("Human wins.")
+            if ((playerSelection=='rock' && computerSelection=='scissors') ||
+            (playerSelection=='scissors' && computerSelection=='paper') ||
+            (playerSelection=='paper' && computerSelection=='rock')) {
+                return(playerSelection + " vs " + computerSelection + ": the human wins.")
             }
 
-            else if (humanPlay < computerPlay) {
-                alert("Computer wins.")
-            }
+           else if (playerSelection == computerSelection) {
+               return(playerSelection + " vs " + computerSelection + ": it's a tie.")
+           }
 
-            else if (humanPlay == computerPlay) {
-                alert("It's a tie.")
+            else {
+                return(playerSelection + " vs " + computerSelection + ": the computer wins.")
             }
-
         }
-
-        //const playerSelection = 'rock';
-        //const computerSelection = computerPlay(hand);
 
         //function game(){} //5 rounds; loop starts with for() {...}
     </script>
