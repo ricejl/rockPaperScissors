@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row text-center">
+        <div class="col-12">
+          <h1>Rock Paper Scissors</h1>
+          <h2>Mortal vs Machine</h2>
+          <p>What will it be? Your choice, human.</p>
+        </div>
+      </div>
+      <div class="row d-flex direction-row">
+        <div class="col-4">
+          <div class="card bg-dark text-white resizeCard">
+            <img
+              src="https://images.unsplash.com/photo-1533162507191-d90c625b2640?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+              class="card-img"
+              alt="..."
+            />
+            <div class="card-img-overlay">
+              <a href="#" class="btn btn-light" onclick="playRound('rock')"
+                >Rock</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card bg-dark text-white resizeCard">
+            <img
+              src="https://images.unsplash.com/photo-1527239441953-caffd968d952?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+              class="card-img"
+              alt="..."
+            />
+            <div class="card-img-overlay">
+              <a href="#" class="btn btn-dark" onclick="playRound('paper')"
+                >Paper</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card bg-dark text-white resizeCard">
+            <img src="/Forbici_da_occhielli.jpg" class="card-img" alt="..." />
+            <div class="card-img-overlay">
+              <a href="#" class="btn btn-light" onclick="playRound('scissors')"
+                >Scissors</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row text-center p-5">
+        <div id="gameResult" class="col"></div>
+      </div>
+    </div>
+
+    <!-- <p><span id="humanPlay"></span></p>
+          <p><span id="computerPlay"></span></p>
+          <p><span id="result"></span></p> -->
+
+    <script src="app.js"></script>
+  </body>
+</html>
